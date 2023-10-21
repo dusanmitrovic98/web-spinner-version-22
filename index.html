@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #0b1e27;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .spinner-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .spirograph {
+            width: 280px;
+            height: 200px;
+            background: transparent;
+            border: 2px solid #ff5733;
+            border-radius: 100%;
+            position: relative;
+            animation: spin 3s linear infinite;
+        }
+
+        .pen {
+            width: 6px;
+            height: 6px;
+            background: #00a5ff;
+            border-radius: 50%;
+            position: absolute;
+            animation: trace 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes trace {
+            0% {
+                transform: translateX(100px) translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(100px) translateY(0) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner-container">
+        <div class="spirograph">
+            <div class="pen"></div>
+        </div>
+    </div>
+</body>
+
+</html>
